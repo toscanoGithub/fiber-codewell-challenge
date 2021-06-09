@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     marginLeft: "5vw",
-
+    height: "100vh",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
       marginLeft: 0,
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    height: "100vh",
+    height: "100%",
     width: "50vw",
     position: "absolute",
     right: 0,
