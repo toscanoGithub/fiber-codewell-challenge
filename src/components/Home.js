@@ -11,12 +11,12 @@ import Footer from "./Footer";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#FBF8F3",
-    padding: "80px 10px",
+    padding: "30px 10px",
   },
 
   landing: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     alignItems: "center",
 
     [theme.breakpoints.down("sm")]: {
@@ -45,13 +45,23 @@ const useStyles = makeStyles((theme) => ({
   },
 
   landingB: {
-    "&>img": {
-      maxHeight: "calc(100vh - 160px)",
-      objectFit: "contain",
+    zIndex: 1000,
+    width: "100%",
+    height: "calc(100vh - 160px)",
+    background: "url('../images/hero-Illustration.png')",
+    backgroundPosition: "right",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "contain",
+    minHeight: "80vh",
+    [theme.breakpoints.down("sm")]: {
+      height: "calc(90vh - 160px)",
+      backgroundPosition: "center",
+      // width: "100%",
+      // backgroundAttachment: "fixed",
+    },
 
-      [theme.breakpoints.down("md")]: {
-        maxWidth: "90vw",
-      },
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
     },
   },
 
@@ -257,7 +267,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   info: {
-    marginLeft:10,
+    marginLeft: 10,
     "&>h4": {
       fontWeight: 700,
       fontSize: "1.2rem",
@@ -265,7 +275,6 @@ const useStyles = makeStyles((theme) => ({
     "&>h6": {
       fontSize: "1rem",
     },
-    
   },
   avatar: {
     height: 70,
@@ -330,7 +339,12 @@ function Home() {
         </div>
 
         <div className={classes.landingB}>
-          <img src="../images/hero-Illustration.png" alt="" srcset="" />
+          {/* <img
+            className={classes.toHideOnSmallDevices}
+            src="../images/hero-Illustration.png"
+            alt=""
+            srcset=""
+          /> */}
         </div>
       </div>
 
